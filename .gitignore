@@ -1,0 +1,27 @@
+# .gitignore: files and folders git should never track.
+# Rules: one pattern per line. A trailing / means "a folder".
+# * matches any characters. A leading ! makes an exception to an earlier rule.
+# A pattern without a leading / matches at any depth in the repo.
+
+# --- Secrets: never commit real passwords or keys ---
+.env
+.env.*
+!.env.example
+
+# --- Java / Maven build output ---
+target/
+
+# --- Node / React ---
+node_modules/
+dist/
+
+# --- Logs ---
+*.log
+
+# --- macOS ---
+.DS_Store
+
+# --- Editors ---
+*.swp
+*.swo
+.idea/
