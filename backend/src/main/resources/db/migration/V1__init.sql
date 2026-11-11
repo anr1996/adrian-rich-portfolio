@@ -58,7 +58,7 @@ CREATE TABLE project_tags (
 CREATE INDEX idx_project_tags_tag_id ON project_tags (tag_id);
 
 -- ========================================================================
--- Education: WGU degree, OMSC.
+-- Education: WGU degree, OMSCS
 -- ========================================================================
 
 CREATE TABLE education (
@@ -121,7 +121,7 @@ CREATE TABLE skills (
 CREATE TABLE links (
 	id 	      BIGINT      GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	label 	      VARCHAR(50) NOT NULL,
-	url           VARCHAR(50) NOT NULL CHECK (url ~ '^(https://|mailto:)'),
+	url           VARCHAR(500) NOT NULL CHECK (url ~ '^(https://|mailto:)'),
 	display_order INTEGER     NOT NULL DEFAULT 0
 	
 );
