@@ -18,7 +18,7 @@ public record ProjectResponse(
 
     /** Builds a response from an entity, with tag names sorted alphabetically. */
     static ProjectResponse from(Project project) {
-        List<String> tagNames = project.getTags(),stream()
+        List<String> tagNames = project.getTags().stream()
             .map(Tag::getName)
             .sorted()
             .toList();
@@ -26,7 +26,7 @@ public record ProjectResponse(
         project.getSlug(),
         project.getTitle(),
         project.getSummary(),
-        project,getDescription(),
+        project.getDescription(),
         project.getRepoUrl(),
         project.getDemoUrl(),
         project.isFeatured(),
