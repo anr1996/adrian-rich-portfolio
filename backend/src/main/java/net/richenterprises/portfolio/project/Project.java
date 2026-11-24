@@ -66,7 +66,7 @@ public class Project {
         return description;
     }
     
-    public String  getUrl() {
+    public String  getRepoUrl() {
         return repoUrl;
     }
 
