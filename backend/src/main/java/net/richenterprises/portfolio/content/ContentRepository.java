@@ -32,5 +32,28 @@ class ContentRepository {
             .query(LinkResponse.class)
             .list();
     }
+
+    /** Education entries in display order. */
+    List<EducationResponse> findEducation() {
+        return jdbc.sql("""
+                SELECT institution, credential, status, start_date, end_date, description
+                FROM education
+                ORDER BY display_order
+                """)
+                .query(EducationResponse.class)
+                .list();
+    }
+    
+    /** Certifications in display order. */
+    List<CertificationResponse> findCertifications() {
+        return jdbc.sql("""
+                SELECT name, issuer, issued_on, expires_on
+                FROM certifications
+                ORDER BY display_order
+                """)
+                .query(CertificationResponse.class)
+                .list();
+    }
 }
+
 

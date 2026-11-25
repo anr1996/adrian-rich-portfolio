@@ -29,4 +29,14 @@ class ContentController {
     List<LinkResponse> links() {
         return content.findLinks();
     }
+    
+    @GetMapping("/education")
+    List<EducationResponse> education() {
+        return content.findEducation();
+    }
+
+    @GetMapping("/certifications")
+    List<CertificationResponse> certifications() {
+        return content.findCertifications();
+    }
 }
