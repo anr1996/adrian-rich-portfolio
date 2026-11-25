@@ -39,4 +39,14 @@ class ContentController {
     List<CertificationResponse> certifications() {
         return content.findCertifications();
     }
+    
+    @GetMapping("/experience")
+    List<ExperienceResponse> experience() {
+        return content.findExperience();
+    }
+    
+    @GetMapping("/skills")
+    List<SkillResponse> skills() {
+        return content.findSkills();
+    }
 }
