@@ -1,5 +1,7 @@
 # Adrian Rich Portfolio
 
+![CI](https://github.com/anr1996/adrian-rich-portfolio/actions/workflows.ci.yml/badge.svg)
+
 A full-stack personal portfolio website with a private admin dashboard for managing its content.
 
 **Status:** in development
